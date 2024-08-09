@@ -1,6 +1,6 @@
 ---
-title: "SvelteのWritableストア解説"
-emoji: "❄️b"
+title: "Svelte Writable概説"
+emoji: "❄️"
 type: "tech"
 topics: [TypeScript, Svelte]
 published: true
