@@ -1,5 +1,5 @@
 ---
-title: "Svelte Writable概説"
+title: "Svelte Writableストア 概説"
 emoji: "❄️"
 type: "tech"
 topics: [TypeScript, Svelte]
