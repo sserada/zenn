@@ -111,5 +111,5 @@ src
 **参考**
 
 1. Kyohei Hamaguchi, 小関康裕. 『実践 Svelte入門』. 技術評論社, 2023, pp. 97-112.
-2. LEARN.SVELTE.DEV. “Writable stores”. SVELTE.DEV. https://svelte.jp/docs/svelte-store, (2023-08-03).
+2. SVELTE.DEV, “Writable stores”. https://svelte.jp/docs/svelte-store, (2023-08-03).
 
