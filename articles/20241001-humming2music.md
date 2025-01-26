@@ -1,5 +1,5 @@
 ---
-title: "[論文メモ] Humming2Music: Being A Composer As Long As You Can Humming"
+title: "[論文] 鼻歌から楽曲を生成！Humming2Musicの論文要約"
 emoji: "🎧"
 type: "idea"
 topics: [論文, 音楽]

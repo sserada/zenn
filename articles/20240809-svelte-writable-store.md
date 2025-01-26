@@ -1,5 +1,5 @@
 ---
-title: "Svelte Writableストア 概説"
+title: "[Svelte] コンポーネント間で変数を共有！Writableストアの使い方"
 emoji: "❄️"
 type: "tech"
 topics: [TypeScript, Svelte]
