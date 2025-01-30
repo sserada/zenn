@@ -15,8 +15,16 @@ https://github.com/open-webui/open-webui
 https://ollama.com/
 
 # 前提条件
-DeepSeek R1の小型バージョン（1.5Bパラメータ）を使用する場合でも，最低でも8GB程度のメモリは必要らしいです．大型モデルを動かす場合は，VRAM 84GB以上が推奨されています．
-筆者はメモリ256GB，VRAM144GBと冗長な環境で実行しています．
+DeepSeek R1の小型バージョン（1.5Bパラメータ）を使用する場合でも，最低でも8GB程度のメモリは必要らしいです．
+筆者はメモリ256GB，VRAM144GBの環境で実行しています．
 
 # Ollamaのインストール
+[Ollamaの公式サイト](https://ollama.com/)からインストーラをダウンロードし，実行する．もしくは，以下のコマンドを実行することでインストールを行えます：
+```bash
+curl -fsSL https://ollama.com/install.sh | sh
+```
+インストールが完了したら，以下のコマンドで正しくインストールが行われたか確認してください．
+```bash
+ollama --version
+```
 
