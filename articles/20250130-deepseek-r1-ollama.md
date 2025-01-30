@@ -52,7 +52,7 @@ open-webui --version
 ```bash
 open-webui serve
 ```
-起動時の出力の中に` OLLAMA_HOST:http://~~~~ `のような文章があると思いますので，そのURLにブラウザでアクセスしてください（デフォルトでは` http://localhost:8080 `）．
+起動時の出力の中に` Uvicorn running on http://~~~~ (Press CTRL+C to quit) `のような文章があると思いますので，そのURLにブラウザでアクセスしてください（デフォルトでは` http://localhost:8080 `）．
 Open WebUIの初期設定画面が表示されていれば，正しく起動しています．
 初期設定完了後のチャット画面で，左上からモデルを選択することができます．その中に先ほどダウンロードしたDeepSeek R1のモデルがあれば完了です．選択して，チャットを送信してみてください．
 ![Open WebUI モデル選択画面](/images/20250130-deepseek-r1-ollama/select.png)
