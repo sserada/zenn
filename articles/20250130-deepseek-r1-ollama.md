@@ -58,7 +58,7 @@ Open WebUIの初期設定画面が表示されていれば，正しく起動し�
 ![Open WebUI モデル選択画面](/images/20250130-deepseek-r1-ollama/select.png)
 
 # まとめ
-本記事では，DeepSeek R1をOpen WebUIとOllamaを用いてローカル環境で使用するための手順を解説しました．
+本記事では，DeepSeek R1をOpen WebUIとOllamaを用いてローカル環境で使用するための手順を解説しました．ぜひ本記事の手順を参考に，ローカル環境での高度なAIモデルの活用に挑戦してみてください．
 
 # 参考文献
 - [GitHub - DeepSeek R1](https://github.com/deepseek-ai/DeepSeek-R1)
