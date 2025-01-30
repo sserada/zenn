@@ -3,7 +3,7 @@ title: "[Discord.py] Discord Botのコマンドを簡単に定義！コマンド
 emoji: "🐍"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [python, discord, discord.py]
-published: false
+published: true
 ---
 
 # はじめに
@@ -63,3 +63,66 @@ async def baz(ctx):
 ```
 この例では，` !foo bar `と` !foo baz `というコマンドで，それぞれ` This is bar command. `と` This is baz command. `というメッセージが送信されます．
 ![サブコマンド](/images/20250126-discord-command-ext/subcommand.png)
+
+# パラメータの取り扱い
+コマンド関数の引数は，ユーザからの入力に対応することができます．基本的な位置関数から可変調引数，キーワード専用引数まで，さまざまな形式の引数をサポートしています．
+
+## 位置引数
+最も基本的な引数は引数です．例えば，以下のように定義します:
+
+```python
+@bot.command()
+async def greet(ctx, name: str):
+    await ctx.send(f'Hello, {name}!')
+```
+ユーザが` !greet Alice `というコマンドを実行すると，` Hello, Alice! `というメッセージが送信されます．複数の単語を含む引数を渡す場合は，引用符で囲む必要があります．
+
+## 可変調引数
+ユーザから不特定多数の引数を受け取りたい場合，可変長引数を使用できます．例えば，以下のように定義します:
+
+```python
+@bot.command()
+async def echo(ctx, *args):
+    response = ' '.join(args)
+    await ctx.send(response)
+```
+ユーザが` !echo Hello, world! `というコマンドを実行すると，` Hello, world! `というメッセージが送信されます．
+
+## キーワード専用引数
+キーワード専用引数は，引数にデフォルト値を設定できる引数です．例えば，以下のように定義します:
+
+```python
+@bot.command()
+async def repeat(ctx, times: int = 3, content='repeating...'):
+    for i in range(times):
+        await ctx.send(content)
+```
+ユーザが` !repeat `というコマンドを実行すると，` repeating... `というメッセージが3回送信されます．また，` !repeat 5 Hello! `というコマンドを実行すると，` Hello! `というメッセージが5回送信されます．
+
+## コンバータ
+` discord.py `のコマンド拡張は，ユーザからの入力を特定の形に変換するためのコンバータを提供しています．これにより，入力の検証や変換を簡単に行うことができます．
+例えば，引数を整数として受け取りたい場合，関数の引数に型ヒントを指定します:
+
+```python
+@bot.command()
+async def add(ctx, a: int, b: int):
+    await ctx.send(a + b)
+```
+ユーザが` !add 3 5 `というコマンドを実行すると，` 8 `というメッセージが送信されます．もし，ユーザが整数以外の値を入力した場合，ボットは自動的にエラーを検知し，適切なエラーメッセージを送信します．
+
+さらに，` discord.py `は特定のDiscordオブジェクト（ユーザ，チャンネル，ロールなど）への変換もサポートしています．例えば，ユーザをメンションで指定し，そのユーザオブジェクトを取得することができます:
+
+```python
+@bot.command()
+async def info(ctx, user: discord.Member):
+    await ctx.send(f'Hello, {user.display_name}!')
+```
+ユーザが` !info @Alice `というコマンドを実行すると，` Hello, Alice! `というメッセージが送信されます．
+
+# まとめ
+この記事では，` discord.py `のコマンド拡張機能を使ったコマンドの定義方法について解説しました．コマンド拡張機能を使うことで，ボットの機能を柔軟かつ強力に拡張することができます．
+
+コマンドの定義方法，サブコマンドの定義方法，パラメータの取り扱い方法について理解し，自分のボットに応じたコマンドを定義してみてください．
+
+### 参考文献
+[discord.py Documentation - Commands](https://discordpy.readthedocs.io/en/stable/ext/commands/commands.html)
