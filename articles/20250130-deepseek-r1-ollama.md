@@ -3,7 +3,7 @@ title: "[DeepSeek R1]ローカルで簡単に⁉︎Open WebUIとOllamaを使っ�
 emoji: "🧠"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [ollama, DeepSeek, Open WebUI, LLM]
-published: false
+published: true
 ---
 
 # はじめに
